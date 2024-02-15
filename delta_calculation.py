@@ -1,9 +1,15 @@
 import math
 
-a = int(input("Enter a: "))
-b = int(input("Enter b: "))
-c = int(input("Enter c: "))
-
+while (True):
+    try:
+        a = float(input("Enter a: "))
+        b = float(input("Enter b: "))
+        c = float(input("Enter c: "))
+        break
+    except ValueError as err:
+        print("Only numbers are allowed.")
+        continue
+    
 delta = (b**2) - (4*a*c)
 
 if delta > 0:
